@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.nuxeo.ecm.quota.contrib.trash">
+
+<require>org.nuxeo.ecm.quota.contrib</require>
+
+  <documentation>
+    Contribution to the QuotaStatsService registering a
+    QuotaStatsUpdater to count non-folderish documents in 'deleted' state.
+
+    @author Vincent Dutat (vdutat@nuxeo.com)
+    @since 6.0
+  </documentation>
+
+  <extension target="org.nuxeo.ecm.quota.QuotaStatsService" point="quotaStatsUpdaters">
+
+    <quotaStatsUpdater name="deletedDocumentsCountUpdater"
+      class="org.nuxeo.ecm.quota.count.DeletedDocumentsCountUpdater"
+      label="label.quota.deletedDocumentsCountUpdater"
+      descriptionLabel="label.quota.deletedDocumentsCountUpdater.description"/>
+
+<!-- TODO ??
+    <quotaStatsUpdater name="deletedDocumentsSizeUpdater"
+      class="org.nuxeo.ecm.quota.size.QuotaSyncListenerChecker"
+      label="label.quota.deletedDocumentsCountSizeUpdater"
+      descriptionLabel="label.quota.deletedDocumentsCountSizeUpdater.description"/>
+ -->
+
+  </extension>
+
+</component>

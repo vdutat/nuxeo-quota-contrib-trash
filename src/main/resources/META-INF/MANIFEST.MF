@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 1
+Bundle-Name: nuxeo-quota-contrib-trash
+Bundle-SymbolicName: nuxeo-quota-contrib-trash;singleton:=true
+Bundle-Vendor: Nuxeo
+Bundle-Version: 1.0.0
+Nuxeo-component: OSGI-INF/quotastats-contrib.xml
